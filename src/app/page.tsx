@@ -32,23 +32,28 @@ export default function Home() {
 
   return (
    <>
-   <div className="flex flex-col items-center justify-center h-screen space-y-4">
+   <div className="flex items-center justify-center min-h-screen bg-gray-600 dark:bg-gray-500">
+   <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700 mx-auto
+   transition-all duration-[600ms] ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] hover:rotate-[15deg] hover:rounded-[10px]
+
+
+   ">
     <div className="">
     <h1 className="text-3xl font-bold">
-      Hello world!
+      Git Hub!
     </h1>
     <Image
       className="rounded-lg"
       src="https://avatars.githubusercontent.com/u/141113437?s=96&v=4"
       alt="git hub avatar"
-      width={180}
+      width={120}
       height={37}
       priority
     />
     </div>
 
     <div>
-      <h1 className="font-bold underline">Github Details</h1>
+      {/* <h1 className="font-bold underline">Github Details</h1> */}
       {error ? (
         <p className="text-red-500 mt-4">Error: {error}</p>
       ) : data ? (
@@ -69,6 +74,7 @@ export default function Home() {
 
     </div>
 
+   </div>
    </div>
    </>
   );
